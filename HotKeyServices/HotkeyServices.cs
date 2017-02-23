@@ -22,9 +22,9 @@ namespace HotKeyServices
                 cmd = Console.ReadLine()?.ToLowerInvariant();
                 switch (cmd)
                 {
-                    case "stop": _hotkey.Stop(); break;
-                    case "start": _hotkey.Start(); break;
-                    case "clear": _hotkey.Clear(); break;
+                    case "stop": hotkey.Stop(); break;
+                    case "start": hotkey.Start(); break;
+                    case "clear": hotkey.Clear(); break;
 
                 }
             } while (!string.IsNullOrEmpty(cmd));
