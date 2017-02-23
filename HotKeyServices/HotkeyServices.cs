@@ -15,15 +15,6 @@ namespace HotKeyServices
 
             hotkey.Start();
 
-            var hotkey2 = new Hotkey(IntPtr.Zero);
-
-            hotkey2.Add(new Hotkey.NativeKey(Hotkey.ModifierKeys.Control, Hotkey.WindowsKeys.Left), () => Hotkey.KeyPress(Hotkey.WindowsKeys.PreviousTrack));
-            hotkey2.Add(new Hotkey.NativeKey(Hotkey.ModifierKeys.Control, Hotkey.WindowsKeys.Right), () => Hotkey.KeyUp(Hotkey.WindowsKeys.NextTrack));
-            hotkey2.Add(new Hotkey.NativeKey(Hotkey.ModifierKeys.Control, Hotkey.WindowsKeys.Up), () => Hotkey.KeyPress(Hotkey.WindowsKeys.PlayPause));
-            hotkey2.Add(new Hotkey.NativeKey(Hotkey.ModifierKeys.Control, Hotkey.WindowsKeys.Down), () => Hotkey.KeyPress(Hotkey.WindowsKeys.StopMedia));
-
-            hotkey2.Start();
-
 #if DEBUG
             string cmd;
             do
